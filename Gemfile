@@ -47,3 +47,5 @@ end
 
 gem 'therubyracer'
 gem 'sqlite3'
+gem 'unicorn'
+
