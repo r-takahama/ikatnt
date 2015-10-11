@@ -46,6 +46,6 @@ group :development do
 end
 
 gem 'therubyracer'
-gem 'sqlite3'
 gem 'unicorn'
-
+gem 'devise'
+gem 'omniauth-twitter'
