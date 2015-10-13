@@ -1,0 +1,61 @@
+<%= form_for(@fe) do |f| %>
+  <% if @fe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fe.errors.count, "error") %> prohibited this fe from being saved:</h2>
+
+      <ul>
+      <% @fe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "大会名" %><br>
+    <%= f.text_field :fesName %>
+  </div>
+  <div class="field">
+    <%= f.label "運営者名" %><br>
+    <%= f.text_field :adminName %>
+  </div>
+  <div class="field">
+    <%= f.label "運営者TwitterアカウントID" %><br>
+    <%= f.text_field :adminTwitterID %>
+  </div>
+  <div class="field">
+    <%= f.label "大会概要" %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label "大会ルール" %><br>
+    <%= f.text_field :rule %>
+  </div>
+  <div class="field">
+    <%= f.label "参加チーム数上限" %><br>
+    <%= f.number_field :limitNumberOfTeam %>
+  </div>
+  <div class="field">
+    <%= f.label "大会開始日時" %><br>
+    <%= f.datetime_select :startDate %>
+  </div>
+  <div class="field">
+    <%= f.label "参加登録締切日時" %><br>
+    <%= f.datetime_select :registrationDeadline %>
+  </div>
+  <div class="field">
+    <%= f.label "運営ニコニコミュニティ名" %><br>
+    <%= f.text_field :adminCommunityName %>
+  </div>
+  <div class="field">
+    <%= f.label "運営ニコニコミュニティURL" %><br>
+    <%= f.text_field :adminCommunityURL %>
+  </div>
+  <div class="field">
+    <%= f.label "大会作成日時" %><br>
+    <%= f.datetime_select :createDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit "作成" %>
+  </div>
+<% end %>

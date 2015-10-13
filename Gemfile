@@ -49,3 +49,5 @@ gem 'therubyracer'
 gem 'unicorn'
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'bootstrap-sass'
+

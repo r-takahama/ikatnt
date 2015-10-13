@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap-custom";
+
+.white {
+    color: #e5e5e5;
+}
+
+.btn-login {
+    background-color: #55acee;
+    border-color: rgba(0,0,0,0.2);
+}
+.btn-login:hover, .btn-login:focus {
+    background-color: #2795e9;
+    border-color: rgba(0,0,0,0.2);
+}
+
+body a:hover, a:focus {
+    color: #2795e9;
+}

@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"}, skip: [:passwords],
     controllers: { omniauth_callbacks: "omniauth_callbacks" }
-  get 'home/index'
 
-  get 'home/show'
+  resources :home, only:[:index]
+  # get 'home/index'
 
-  resources :boards
+  resources :mypage, only:[:index]
+  # get 'mypage/index'
+  get 'mypage', to: 'mypage#index', as: 'mypage'
+
+  resources :fes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root "home#index"
+  # mypage 'mypage#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
