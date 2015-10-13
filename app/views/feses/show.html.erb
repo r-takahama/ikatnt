@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fesname:</strong>
+  <%= @fes.fesName %>
+</p>
+
+<p>
+  <strong>Adminname:</strong>
+  <%= @fes.adminName %>
+</p>
+
+<p>
+  <strong>Admintwitterid:</strong>
+  <%= @fes.adminTwitterID %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fes.description %>
+</p>
+
+<p>
+  <strong>Rule:</strong>
+  <%= @fes.rule %>
+</p>
+
+<p>
+  <strong>Limitnumberofteam:</strong>
+  <%= @fes.limitNumberOfTeam %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @fes.startDate %>
+</p>
+
+<p>
+  <strong>Registrationdeadline:</strong>
+  <%= @fes.registrationDeadline %>
+</p>
+
+<p>
+  <strong>Admincommunityname:</strong>
+  <%= @fes.adminCommunityName %>
+</p>
+
+<p>
+  <strong>Admincommunityurl:</strong>
+  <%= @fes.adminCommunityURL %>
+</p>
+
+<%= link_to 'Edit', edit_fes_path(@fes) %> |
+<%= link_to 'Back', feses_path %>

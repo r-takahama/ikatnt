@@ -1,0 +1,1 @@
+json.extract! @fes, :id, :fesName, :adminName, :adminTwitterID, :description, :rule, :limitNumberOfTeam, :startDate, :registrationDeadline, :adminCommunityName, :adminCommunityURL, :created_at, :updated_at

@@ -18,4 +18,14 @@
 運営ニコニコミュニティ名
 運営ニコニコミュニティURL
 大会作成日時
-`rails g scaffold fes fesName:string adminName:string adminTwitterID:string description:text rule:string limitNumberOfTeam:integer startDate:datetime registrationDeadline:datetime adminCommunityName:string adminCommunityURL:string createDate:datetime`
+`rails g scaffold fes fesName:string adminName:string adminTwitterID:string description:text rule:string limitNumberOfTeam:integer startDate:datetime registrationDeadline:datetime adminCommunityName:string adminCommunityURL:string`
+
+- モデル participation の DB 構成
+参加登録大会ID
+登録チーム名
+代表者 Twitter アカウントID
+代表者 NintendoNetworkID
+参加登録日時
+登録ユーザID
+`rails g scaffold participation fes:references teamName:string TwitterID:string NNID:string UserID:string`
+current_user.uid

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fes:</strong>
+  <%= @participation.fes %>
+</p>
+
+<p>
+  <strong>Teamname:</strong>
+  <%= @participation.teamName %>
+</p>
+
+<p>
+  <strong>Twitterid:</strong>
+  <%= @participation.TwitterID %>
+</p>
+
+<p>
+  <strong>Nnid:</strong>
+  <%= @participation.NNID %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @participation.UserID %>
+</p>
+
+<%= link_to 'Edit', edit_fes_participation_path(@fes, @participation) %> |
+<%= link_to 'Back', fes_participations_path %>

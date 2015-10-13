@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013083350) do
+ActiveRecord::Schema.define(version: 20151013130309) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +35,33 @@ ActiveRecord::Schema.define(version: 20151013083350) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "feses", force: :cascade do |t|
+    t.string   "fesName",              null: false
+    t.string   "adminName",            null: false
+    t.string   "adminTwitterID",       null: false
+    t.text     "description"
+    t.string   "rule",                 null: false
+    t.integer  "limitNumberOfTeam",    null: false
+    t.datetime "startDate",            null: false
+    t.datetime "registrationDeadline", null: false
+    t.string   "adminCommunityName"
+    t.string   "adminCommunityURL"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "participations", force: :cascade do |t|
+    t.integer  "fes_id"
+    t.string   "teamName",   null: false
+    t.string   "TwitterID",  null: false
+    t.string   "NNID",       null: false
+    t.string   "UserID",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "participations", ["fes_id"], name: "index_participations_on_fes_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -9,9 +9,12 @@ Rails.application.routes.draw do
   # get 'mypage/index'
   get 'mypage', to: 'mypage#index', as: 'mypage'
 
-  resources :fes
+  # resources :fes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :feses do
+    resources :participations
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

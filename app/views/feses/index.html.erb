@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Feses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fesname</th>
+      <th>Adminname</th>
+      <th>Admintwitterid</th>
+      <th>Description</th>
+      <th>Rule</th>
+      <th>Limitnumberofteam</th>
+      <th>Startdate</th>
+      <th>Registrationdeadline</th>
+      <th>Admincommunityname</th>
+      <th>Admincommunityurl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feses.each do |fes| %>
+      <tr>
+        <td><%= fes.fesName %></td>
+        <td><%= fes.adminName %></td>
+        <td><%= fes.adminTwitterID %></td>
+        <td><%= fes.description %></td>
+        <td><%= fes.rule %></td>
+        <td><%= fes.limitNumberOfTeam %></td>
+        <td><%= fes.startDate %></td>
+        <td><%= fes.registrationDeadline %></td>
+        <td><%= fes.adminCommunityName %></td>
+        <td><%= fes.adminCommunityURL %></td>
+        <td><%= link_to 'Show', fes %></td>
+        <td><%= link_to 'Edit', edit_fes_path(fes) %></td>
+        <td><%= link_to 'Destroy', fes, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fes', new_fes_path %>
