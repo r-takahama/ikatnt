@@ -50,5 +50,7 @@
   <%= @fes.adminCommunityURL %>
 </p>
 
+<%= link_to "参加チーム一覧", fes_participations_path(@fes), {:class => "btn btn-success"} %>
+<br>
 <%= link_to 'Edit', edit_fes_path(@fes) %> |
 <%= link_to 'Back', feses_path %>
