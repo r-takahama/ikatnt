@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fes:</strong>
+  <%= @table.fes %>
+</p>
+
+<p>
+  <strong>Teamname:</strong>
+  <%= @table.teamName %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @table.UserID %>
+</p>
+
+<p>
+  <strong>Teamnumber:</strong>
+  <%= @table.teamNumber %>
+</p>
+
+<p>
+  <strong>Seednumber:</strong>
+  <%= @table.seedNumber %>
+</p>
+
+<%= link_to 'Edit', edit_fes_table_path(@fes, @table) %> |
+<%= link_to 'Back', fes_tables_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fes_id: 
+  teamName: MyString
+  UserID: MyString
+  teamNumber: 1
+  seedNumber: 1
+
+two:
+  fes_id: 
+  teamName: MyString
+  UserID: MyString
+  teamNumber: 1
+  seedNumber: 1

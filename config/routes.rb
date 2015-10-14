@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :feses do
     resources :participations
     resources :matches
+    resources :tables
   end
 
   # You can have the root of your site routed with "root"
