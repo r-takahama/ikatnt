@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fes</th>
+      <th>Myuserid</th>
+      <th>Myteamname</th>
+      <th>Mytwitterid</th>
+      <th>Mynnid</th>
+      <th>Enemyuserid</th>
+      <th>Enemyteamname</th>
+      <th>Enemytwitterid</th>
+      <th>Enemynnid</th>
+      <th>Numberofwins</th>
+      <th>Numberoflosses</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.fes %></td>
+        <td><%= match.MyUserID %></td>
+        <td><%= match.MyTeamName %></td>
+        <td><%= match.MyTwitterID %></td>
+        <td><%= match.MyNNID %></td>
+        <td><%= match.EnemyUserID %></td>
+        <td><%= match.EnemyTeamName %></td>
+        <td><%= match.EnemyTwitterID %></td>
+        <td><%= match.EnemyNNID %></td>
+        <td><%= match.NumberOfWins %></td>
+        <td><%= match.NumberOfLosses %></td>
+        <td><%= link_to 'Show', fes_match_path(@fes, match) %></td>
+        <td><%= link_to 'Edit', edit_fes_match_path(@fes, match) %></td>
+        <td><%= link_to 'Destroy', fes_match_path(@fes, match), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match', new_fes_match_path %>

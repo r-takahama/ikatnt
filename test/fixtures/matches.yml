@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fes_id: 
+  MyUserID: MyString
+  MyTeamName: MyString
+  MyTwitterID: MyString
+  MyNNID: MyString
+  EnemyUserID: MyString
+  EnemyTeamName: MyString
+  EnemyTwitterID: MyString
+  EnemyNNID: MyString
+  NumberOfWins: 1
+  NumberOfLosses: 1
+
+two:
+  fes_id: 
+  MyUserID: MyString
+  MyTeamName: MyString
+  MyTwitterID: MyString
+  MyNNID: MyString
+  EnemyUserID: MyString
+  EnemyTeamName: MyString
+  EnemyTwitterID: MyString
+  EnemyNNID: MyString
+  NumberOfWins: 1
+  NumberOfLosses: 1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013130309) do
+ActiveRecord::Schema.define(version: 20151014124047) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -50,6 +50,24 @@ ActiveRecord::Schema.define(version: 20151013130309) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer  "fes_id"
+    t.string   "MyUserID"
+    t.string   "MyTeamName"
+    t.string   "MyTwitterID"
+    t.string   "MyNNID"
+    t.string   "EnemyUserID"
+    t.string   "EnemyTeamName"
+    t.string   "EnemyTwitterID"
+    t.string   "EnemyNNID"
+    t.integer  "NumberOfWins"
+    t.integer  "NumberOfLosses"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "matches", ["fes_id"], name: "index_matches_on_fes_id"
 
   create_table "participations", force: :cascade do |t|
     t.integer  "fes_id"

@@ -34,3 +34,6 @@
 
 - RailsのScaffoldでネストしたResourceを作る - sometimes I laugh http://sil.hatenablog.com/entry/rails-nested-resource-by-scaffold
 - いつも忘れる「Railsのgenerateコマンド」の備忘録 - maeharin log http://maeharin.hatenablog.com/entry/20130212/rails_generate
+
+- モデル match の DB 構成
+`rails g scaffold match fes:references MyUserID:string MyTeamName:string MyTwitterID:string MyNNID:string EnemyUserID:string EnemyTeamName:string EnemyTwitterID:string EnemyNNID:string NumberOfWins:integer NumberOfLosses:integer`

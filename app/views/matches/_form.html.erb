@@ -1,0 +1,61 @@
+<%= form_for [@fes, @match] do |f| %>
+  <% if @match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% @match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fes_id %><br>
+    <%= f.text_field :fes_id %>
+  </div>
+  <div class="field">
+    <%= f.label :MyUserID %><br>
+    <%= f.text_field :MyUserID %>
+  </div>
+  <div class="field">
+    <%= f.label :MyTeamName %><br>
+    <%= f.text_field :MyTeamName %>
+  </div>
+  <div class="field">
+    <%= f.label :MyTwitterID %><br>
+    <%= f.text_field :MyTwitterID %>
+  </div>
+  <div class="field">
+    <%= f.label :MyNNID %><br>
+    <%= f.text_field :MyNNID %>
+  </div>
+  <div class="field">
+    <%= f.label :EnemyUserID %><br>
+    <%= f.text_field :EnemyUserID %>
+  </div>
+  <div class="field">
+    <%= f.label :EnemyTeamName %><br>
+    <%= f.text_field :EnemyTeamName %>
+  </div>
+  <div class="field">
+    <%= f.label :EnemyTwitterID %><br>
+    <%= f.text_field :EnemyTwitterID %>
+  </div>
+  <div class="field">
+    <%= f.label :EnemyNNID %><br>
+    <%= f.text_field :EnemyNNID %>
+  </div>
+  <div class="field">
+    <%= f.label :NumberOfWins %><br>
+    <%= f.number_field :NumberOfWins %>
+  </div>
+  <div class="field">
+    <%= f.label :NumberOfLosses %><br>
+    <%= f.number_field :NumberOfLosses %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

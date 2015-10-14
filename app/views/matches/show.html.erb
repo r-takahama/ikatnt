@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fes:</strong>
+  <%= @match.fes %>
+</p>
+
+<p>
+  <strong>Myuserid:</strong>
+  <%= @match.MyUserID %>
+</p>
+
+<p>
+  <strong>Myteamname:</strong>
+  <%= @match.MyTeamName %>
+</p>
+
+<p>
+  <strong>Mytwitterid:</strong>
+  <%= @match.MyTwitterID %>
+</p>
+
+<p>
+  <strong>Mynnid:</strong>
+  <%= @match.MyNNID %>
+</p>
+
+<p>
+  <strong>Enemyuserid:</strong>
+  <%= @match.EnemyUserID %>
+</p>
+
+<p>
+  <strong>Enemyteamname:</strong>
+  <%= @match.EnemyTeamName %>
+</p>
+
+<p>
+  <strong>Enemytwitterid:</strong>
+  <%= @match.EnemyTwitterID %>
+</p>
+
+<p>
+  <strong>Enemynnid:</strong>
+  <%= @match.EnemyNNID %>
+</p>
+
+<p>
+  <strong>Numberofwins:</strong>
+  <%= @match.NumberOfWins %>
+</p>
+
+<p>
+  <strong>Numberoflosses:</strong>
+  <%= @match.NumberOfLosses %>
+</p>
+
+<%= link_to 'Edit', edit_fes_match_path(@fes, @match) %> |
+<%= link_to 'Back', fes_matches_path %>
