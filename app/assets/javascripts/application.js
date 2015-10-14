@@ -16,3 +16,10 @@
 //= require_tree .
 //= require bootstrap-sprockets-custom
 
+$(document).ready(function(){
+    activaTab('mypage-home');
+});
+
+function activaTab(tab){
+    $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+};

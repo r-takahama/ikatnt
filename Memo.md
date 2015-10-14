@@ -5,6 +5,7 @@
     ```
     - Railsのログイン認証gemのDeviseとOmniAuth-Twitterの連携（Twitterでログインする） | Rails Webook http://ruby-rails.hatenadiary.com/entry/20140805/1407200400
     - Rails - Devise+OmniAuthでユーザ認証を実装する手順 by @kami30k on @Qiita http://qiita.com/kami30k/items/94aec2d94a2b4e9a1d0b
+    - Rails 4.2 で ユーザー管理・認証 (devise) by @salinger001101 on @Qiita http://qiita.com/Salinger/items/873e3c667462746ae707
 
 - リソース fes の DB 構成
     `rails g scaffold fes fesName:string adminName:string adminTwitterID:string description:text rule:string limitNumberOfTeam:integer startDate:datetime registrationDeadline:datetime adminCommunityName:string adminCommunityURL:string`
@@ -32,3 +33,4 @@
 - current_user.uid で view 内でユーザID取得可
 
 - RailsのScaffoldでネストしたResourceを作る - sometimes I laugh http://sil.hatenablog.com/entry/rails-nested-resource-by-scaffold
+- いつも忘れる「Railsのgenerateコマンド」の備忘録 - maeharin log http://maeharin.hatenablog.com/entry/20130212/rails_generate
