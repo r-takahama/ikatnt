@@ -11,29 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015070052) do
+ActiveRecord::Schema.define(version: 20151015094406) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "fes", force: :cascade do |t|
-    t.string   "fesName"
-    t.string   "adminName"
-    t.string   "adminTwitterID"
-    t.text     "description"
-    t.string   "rule"
-    t.integer  "limitNumberOfTeam"
-    t.datetime "startDate"
-    t.datetime "registrationDeadline"
-    t.string   "adminCommunityName"
-    t.string   "adminCommunityURL"
-    t.datetime "createDate"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
   end
 
   create_table "feses", force: :cascade do |t|
