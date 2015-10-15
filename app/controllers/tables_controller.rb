@@ -7,6 +7,7 @@ class TablesController < ApplicationController
   #  @tables = Table.all
     @fes = Fes.where(:id => params[:fes_id]).first
     @tables = @fes.tables.all
+    @participations = @fes.participations.all
   end
 
   # GET /tables/1

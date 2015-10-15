@@ -36,6 +36,36 @@
 
 <%= link_to 'New Table', new_fes_table_path %>
 
+<h1>Listing Participations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fes</th>
+      <th>Teamname</th>
+      <th>Twitterid</th>
+      <th>Nnid</th>
+      <th>Userid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participations.each do |participation| %>
+      <tr>
+        <td><%= participation.fes %></td>
+        <td><%= participation.teamName %></td>
+        <td><%= participation.TwitterID %></td>
+        <td><%= participation.NNID %></td>
+        <td><%= participation.UserID %></td>
+        <td><%= link_to 'Show', fes_participation_path(@fes, participation) %></td>
+        <td><%= link_to 'Edit', edit_fes_participation_path(@fes, participation) %></td>
+        <td><%= link_to 'Destroy', fes_participation_path(@fes, participation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <p>トーナメント表イメージ</p>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
