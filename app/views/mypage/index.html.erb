@@ -7,7 +7,35 @@
     <li><a href="#mypage-manage-feses" data-toggle="tab">開催中の大会</a></li>
 </ul>
 <div class="tab-content" id="tabs">
-    <div class="tab-pane" id="mypage-home">アカウント情報がうんたらかんたら</div>
-    <div class="tab-pane" id="mypage-participate-feses">参加中の大会のリストもしくは「参加中の大会はありません」</div>
-    <div class="tab-pane" id="mypage-manage-feses">.運営中の大会のリストもしくは「運営中の大会はありません」</div>
+    <!-- <div class="tab-pane" id="mypage-home"> -->
+    	<!-- <p><%= current_user.username %></p> -->
+    <!-- </div> -->
+    <div class="tab-pane" id="mypage-participate-feses">
+    <p>
+    <% count = 0 %>
+    <% @feses.each do |fes| %>
+    <% fes.participations.where(:UserID =>
+     current_user.uid).find_each do |team| %>
+    <% count +=1 %>
+    <%= link_to fes.fesName, fes_path(fes) %><br>
+    <% end %>
+    <% end %>
+    <% if count == 0 %>
+    参加中の大会はありません
+    <% end %>
+    </p>
+    </div>
+    <div class="tab-pane" id="mypage-manage-feses">
+    <p>
+    <% count = 0 %>
+    <% @feses.where(:adminUserID => current_user.uid).find_each do |fes| %>
+    <% count +=1 %>
+    <%= link_to fes.fesName, fes_path(fes) %><br>
+    <% end %>
+    <% if count == 0 %>
+    <%= current_user.uid %>
+    運営中の大会はありません
+    <% end %>
+    </p>
+    </div>
 </div>
