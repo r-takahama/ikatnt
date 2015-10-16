@@ -30,6 +30,27 @@
     - 参加登録日時
     - 登録ユーザID
 
+- モデル match の DB 構成
+"fes_id" integer, (fesにネスト)
+"created_at" datetime NOT NULL, 
+"updated_at" datetime NOT NULL, 
+"round" integer, 
+"battleID" integer, 
+"leftUserID" varchar, 
+"leftTeamName" varchar, 
+"leftTwitterID" varchar, 
+"leftNNID" varchar, 
+"rightUserID" varchar, 
+"rightTeamName" varchar, 
+"rightTwitterID" varchar, 
+"rightNNID" varchar, 
+"resultLeftWins" integer, 
+"resultRightWins" integer, 
+"leftWinsReportedByLeft" integer, 
+"rightWinsReportedByLeft" integer, 
+"leftWinsReportedByRight" integer, 
+"rightWinsReportedByRight" integer;
+
 - current_user.uid で view 内でユーザID取得可
 
 - RailsのScaffoldでネストしたResourceを作る - sometimes I laugh http://sil.hatenablog.com/entry/rails-nested-resource-by-scaffold
