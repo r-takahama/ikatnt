@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015070052) do
+ActiveRecord::Schema.define(version: 20151016142119) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -54,18 +54,24 @@ ActiveRecord::Schema.define(version: 20151015070052) do
 
   create_table "matches", force: :cascade do |t|
     t.integer  "fes_id"
-    t.string   "MyUserID"
-    t.string   "MyTeamName"
-    t.string   "MyTwitterID"
-    t.string   "MyNNID"
-    t.string   "EnemyUserID"
-    t.string   "EnemyTeamName"
-    t.string   "EnemyTwitterID"
-    t.string   "EnemyNNID"
-    t.integer  "NumberOfWins"
-    t.integer  "NumberOfLosses"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "round"
+    t.integer  "battleID"
+    t.string   "leftUserID"
+    t.string   "leftTeamName"
+    t.string   "leftTwitterID"
+    t.string   "leftNNID"
+    t.string   "rightUserID"
+    t.string   "rightTeamName"
+    t.string   "rightTwitterID"
+    t.string   "rightNNID"
+    t.integer  "resultLeftWins"
+    t.integer  "resultRightWins"
+    t.integer  "leftWinsReportedByLeft"
+    t.integer  "rightWinsReportedByLeft"
+    t.integer  "leftWinsReportedByRight"
+    t.integer  "rightWinsReportedByRight"
   end
 
   add_index "matches", ["fes_id"], name: "index_matches_on_fes_id"
