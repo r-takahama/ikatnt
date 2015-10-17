@@ -1,1 +1,1 @@
-json.extract! @match, :id, :fes_id, :MyUserID, :MyTeamName, :MyTwitterID, :MyNNID, :EnemyUserID, :EnemyTeamName, :EnemyTwitterID, :EnemyNNID, :NumberOfWins, :NumberOfLosses, :created_at, :updated_at
+json.extract! @match, :id, :fes_id, :round, :battleID, :leftUserID, :leftTeamName, :leftTwitterID, :leftNNID, :rightUserID, :rightTeamName, :rightTwitterID, :rightNNID, :resultLeftWins, :resultRightWins, :leftWinsReportedByLeft, :rightWinsReportedByLeft, :leftWinsReportedByRight, :rightWinsReportedByRight, :created_at, :updated_at

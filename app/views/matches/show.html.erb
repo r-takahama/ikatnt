@@ -4,55 +4,69 @@
   <strong>Fes:</strong>
   <%= @match.fes %>
 </p>
-
 <p>
-  <strong>Myuserid:</strong>
-  <%= @match.MyUserID %>
+  <strong>Round:</strong>
+  <%= @match.round %>
 </p>
-
 <p>
-  <strong>Myteamname:</strong>
-  <%= @match.MyTeamName %>
+  <strong>battleID:</strong>
+  <%= @match.battleID %>
 </p>
-
 <p>
-  <strong>Mytwitterid:</strong>
-  <%= @match.MyTwitterID %>
+  <strong>leftUserID:</strong>
+  <%= @match.leftUserID %>
 </p>
-
 <p>
-  <strong>Mynnid:</strong>
-  <%= @match.MyNNID %>
+  <strong>leftTeamName:</strong>
+  <%= @match.leftTeamName %>
 </p>
-
 <p>
-  <strong>Enemyuserid:</strong>
-  <%= @match.EnemyUserID %>
+  <strong>leftTwitterID:</strong>
+  <%= @match.leftTwitterID %>
 </p>
-
 <p>
-  <strong>Enemyteamname:</strong>
-  <%= @match.EnemyTeamName %>
+  <strong>leftNNID:</strong>
+  <%= @match.leftNNID %>
 </p>
-
 <p>
-  <strong>Enemytwitterid:</strong>
-  <%= @match.EnemyTwitterID %>
+  <strong>rightUserID:</strong>
+  <%= @match.rightUserID %>
 </p>
-
 <p>
-  <strong>Enemynnid:</strong>
-  <%= @match.EnemyNNID %>
+  <strong>rightTeamName:</strong>
+  <%= @match.rightTeamName %>
 </p>
-
 <p>
-  <strong>Numberofwins:</strong>
-  <%= @match.NumberOfWins %>
+  <strong>rightTwitterID:</strong>
+  <%= @match.rightTwitterID %>
 </p>
-
 <p>
-  <strong>Numberoflosses:</strong>
-  <%= @match.NumberOfLosses %>
+  <strong>rightNNID:</strong>
+  <%= @match.rightNNID %>
+</p>
+<p>
+  <strong>resultLeftWins:</strong>
+  <%= @match.resultLeftWins %>
+</p>
+<p>
+  <strong>resultRightWins:</strong>
+  <%= @match.resultRightWins %>
+</p>
+<p>
+  <strong>leftWinsReportedByLeft:</strong>
+  <%= @match.leftWinsReportedByLeft %>
+</p>
+<p>
+  <strong>rightWinsReportedByLeft:</strong>
+  <%= @match.rightWinsReportedByLeft %>
+</p>
+<p>
+  <strong>leftWinsReportedByRight:</strong>
+  <%= @match.leftWinsReportedByRight %>
+</p>
+<p>
+  <strong>rightWinsReportedByRight:</strong>
+  <%= @match.rightWinsReportedByRight %>
 </p>
 
 <%= link_to 'Edit', edit_fes_match_path(@fes, @match) %> |

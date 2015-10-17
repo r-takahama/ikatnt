@@ -16,44 +16,68 @@
     <%= f.text_field :fes_id %>
   </div>
   <div class="field">
-    <%= f.label :MyUserID %><br>
-    <%= f.text_field :MyUserID %>
+    <%= f.label :round %><br>
+    <%= f.number_field :round %>
   </div>
   <div class="field">
-    <%= f.label :MyTeamName %><br>
-    <%= f.text_field :MyTeamName %>
+    <%= f.label :battleID %><br>
+    <%= f.number_field :battleID %>
   </div>
   <div class="field">
-    <%= f.label :MyTwitterID %><br>
-    <%= f.text_field :MyTwitterID %>
+    <%= f.label :leftUserID %><br>
+    <%= f.text_field :leftUserID %>
   </div>
   <div class="field">
-    <%= f.label :MyNNID %><br>
-    <%= f.text_field :MyNNID %>
+    <%= f.label :leftTeamName %><br>
+    <%= f.text_field :leftTeamName %>
   </div>
   <div class="field">
-    <%= f.label :EnemyUserID %><br>
-    <%= f.text_field :EnemyUserID %>
+    <%= f.label :leftTwitterID %><br>
+    <%= f.text_field :leftTwitterID %>
   </div>
   <div class="field">
-    <%= f.label :EnemyTeamName %><br>
-    <%= f.text_field :EnemyTeamName %>
+    <%= f.label :leftNNID %><br>
+    <%= f.text_field :leftNNID %>
   </div>
   <div class="field">
-    <%= f.label :EnemyTwitterID %><br>
-    <%= f.text_field :EnemyTwitterID %>
+    <%= f.label :rightUserID %><br>
+    <%= f.text_field :rightUserID %>
   </div>
   <div class="field">
-    <%= f.label :EnemyNNID %><br>
-    <%= f.text_field :EnemyNNID %>
+    <%= f.label :rightTeamName %><br>
+    <%= f.text_field :rightTeamName %>
   </div>
   <div class="field">
-    <%= f.label :NumberOfWins %><br>
-    <%= f.number_field :NumberOfWins %>
+    <%= f.label :rightTwitterID %><br>
+    <%= f.text_field :rightTwitterID %>
   </div>
   <div class="field">
-    <%= f.label :NumberOfLosses %><br>
-    <%= f.number_field :NumberOfLosses %>
+    <%= f.label :rightNNID %><br>
+    <%= f.text_field :rightNNID %>
+  </div>
+  <div class="field">
+    <%= f.label :resultLeftWins %><br>
+    <%= f.number_field :resultLeftWins %>
+  </div>
+  <div class="field">
+    <%= f.label :resultRightWins %><br>
+    <%= f.number_field :resultRightWins %>
+  </div>
+  <div class="field">
+    <%= f.label :leftWinsReportedByLeft %><br>
+    <%= f.number_field :leftWinsReportedByLeft %>
+  </div>
+  <div class="field">
+    <%= f.label :rightWinsReportedByLeft %><br>
+    <%= f.number_field :rightWinsReportedByLeft %>
+  </div>
+  <div class="field">
+    <%= f.label :leftWinsReportedByRight %><br>
+    <%= f.number_field :leftWinsReportedByRight %>
+  </div>
+  <div class="field">
+    <%= f.label :rightWinsReportedByRight %><br>
+    <%= f.number_field :rightWinsReportedByRight %>
   </div>
   <div class="actions">
     <%= f.submit %>

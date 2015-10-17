@@ -6,16 +6,22 @@
   <thead>
     <tr>
       <th>Fes</th>
-      <th>Myuserid</th>
-      <th>Myteamname</th>
-      <th>Mytwitterid</th>
-      <th>Mynnid</th>
-      <th>Enemyuserid</th>
-      <th>Enemyteamname</th>
-      <th>Enemytwitterid</th>
-      <th>Enemynnid</th>
-      <th>Numberofwins</th>
-      <th>Numberoflosses</th>
+      <th>round</th>
+      <th>battleID</th>
+      <th>leftUserID</th>
+      <th>leftTeamName</th>
+      <th>leftTwitterID</th>
+      <th>leftNNID</th>
+      <th>rightUserID</th>
+      <th>rightTeamName</th>
+      <th>rightTwitterID</th>
+      <th>rightNNID</th>
+      <th>resultLeftWins</th>
+      <th>resultRightWins</th>
+      <th>leftWinsReportedByLeft</th>
+      <th>rightWinsReportedByLeft</th>
+      <th>leftWinsReportedByRight</th>
+      <th>rightWinsReportedByRight</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,19 +30,25 @@
     <% @matches.each do |match| %>
       <tr>
         <td><%= match.fes %></td>
-        <td><%= match.MyUserID %></td>
-        <td><%= match.MyTeamName %></td>
-        <td><%= match.MyTwitterID %></td>
-        <td><%= match.MyNNID %></td>
-        <td><%= match.EnemyUserID %></td>
-        <td><%= match.EnemyTeamName %></td>
-        <td><%= match.EnemyTwitterID %></td>
-        <td><%= match.EnemyNNID %></td>
-        <td><%= match.NumberOfWins %></td>
-        <td><%= match.NumberOfLosses %></td>
-        <td><%= link_to 'Show', fes_match_path(@fes, match) %></td>
-        <td><%= link_to 'Edit', edit_fes_match_path(@fes, match) %></td>
-        <td><%= link_to 'Destroy', fes_match_path(@fes, match), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= match.round %></td>
+        <td><%= match.battleID %></td>
+        <td><%= match.leftUserID %></td>
+        <td><%= match.leftTeamName %></td>
+        <td><%= match.leftTwitterID %></td>
+        <td><%= match.leftNNID %></td>
+        <td><%= match.rightUserID %></td>
+        <td><%= match.rightTeamName %></td>
+        <td><%= match.rightTwitterID %></td>
+        <td><%= match.rightNNID %></td>
+        <td><%= match.resultLeftWins %></td>
+        <td><%= match.resultRightWins %></td>
+        <td><%= match.leftWinsReportedByLeft %></td>
+        <td><%= match.rightWinsReportedByLeft %></td>
+        <td><%= match.leftWinsReportedByRight %></td>
+        <td><%= match.rightWinsReportedByRight %></td>
+        <!-- <td><%= link_to 'Show', fes_match_path(@fes, match) %></td> -->
+        <!-- <td><%= link_to 'Edit', edit_fes_match_path(@fes, match) %></td> -->
+        <!-- <td><%= link_to 'Destroy', fes_match_path(@fes, match), method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +56,71 @@
 
 <br>
 
-<%= link_to 'New Match', new_fes_match_path %>
+<!-- <%= link_to 'New Match', new_fes_match_path %> -->
+
+<p>テスト出力</p>
+<h1>Listing Participations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fes</th>
+      <th>Teamname</th>
+      <th>Twitterid</th>
+      <th>Nnid</th>
+      <th>Userid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participations.each do |participation| %>
+      <tr>
+        <td><%= participation.fes %></td>
+        <td><%= participation.teamName %></td>
+        <td><%= participation.TwitterID %></td>
+        <td><%= participation.NNID %></td>
+        <td><%= participation.UserID %></td>
+        <td><%= link_to 'Show', fes_participation_path(@fes, participation) %></td>
+        <td><%= link_to 'Edit', edit_fes_participation_path(@fes, participation) %></td>
+        <td><%= link_to 'Destroy', fes_participation_path(@fes, participation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+参加人数
+<%= count = @participations.select('fes_id').count%> <br>
+対戦数
+<%= count = @matches.select('fes_id').count%>
+
+<p>トーナメント表イメージ</p>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["orgchart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = new google.visualization.DataTable();
+  data.addColumn("string", "Name");
+  data.addColumn("string", "Parent");
+  data.addRows([
+    [{v:'top', f:'winner'}, ''],
+    [{v:'semi1', f:'best2-1'}, 'top'],
+    [{v:'quater1', f:'best4-1'}, 'semi1'],
+    [{v:'best8-1', f:'team 1'}, 'quater1'],
+    [{v:'best8-2', f:'team 2'}, 'quater1'],
+    [{v:'quater2', f:'best4-2'}, 'semi1'],
+    [{v:'best8-3', f:'team 3'}, 'quater2'],
+    [{v:'best8-4', f:'team 4'}, 'quater2'],
+    [{v:'semi2', f:'best2-2'}, 'top'],
+    [{v:'quater3', f:'best4-3'}, 'semi2'],
+    [{v:'best8-5', f:'team 5'}, 'quater3'],
+    [{v:'best8-6', f:'team 6'}, 'quater3'],
+    [{v:'quater4', f:'best4-4'}, 'semi2'],
+    [{v:'best8-7', f:'team 7'}, 'quater4'],
+    [{v:'best8-8', f:'team 8'}, 'quater4'],
+  ]);
+  var chart = new google.visualization.OrgChart(document.getElementById("chart_div"));
+  chart.draw(data, {allowHtml: true});
+}
+</script>
+<div id="chart_div" style="width: 100%;"></div>
