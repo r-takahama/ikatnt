@@ -50,9 +50,19 @@
   <%= @fes.adminCommunityURL %>
 </p>
 
+<% if participant = @fes.participations.find_by(UserID: current_user.uid) %>
+<%= link_to "登録情報変更", edit_fes_participation_path(@fes,participant) , {:class => "btn btn-success"} %>
+<% else %>
+<%= link_to "参加登録", new_fes_participation_path(@fes) , {:class => "btn btn-success"} %>
+<% end %>
 <%= link_to "参加チーム一覧", fes_participations_path(@fes), {:class => "btn btn-success"} %>
-<%= link_to "試合結果一覧", fes_matches_path(@fes), {:class => "btn btn-success"} %>
-<!-- <%= link_to "トーナメント表作成", fes_tables_path(@fes), {:class => "btn btn-success"} %> -->
+<%# if @fes.adminUserID == current_user.uid %>
+<%= link_to "トーナメント表作成", fes_matches_path(@fes), {:class => "btn btn-success"} %>
+<%# end %>
+<%#= link_to "トーナメント表作成", fes_tables_path(@fes), {:class => "btn btn-success"} %>
 <br>
-<%= link_to 'Edit', edit_fes_path(@fes) %> |
+<%# if @fes.adminUserID == current_user.uid %>
+<%= link_to 'Edit', edit_fes_path(@fes) %>
+|
+<%# end %>
 <%= link_to 'Back', feses_path %>

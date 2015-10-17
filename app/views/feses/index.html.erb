@@ -15,7 +15,7 @@
       <th>Registrationdeadline</th>
       <th>Admincommunityname</th>
       <th>Admincommunityurl</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -32,9 +32,15 @@
         <td><%= fes.registrationDeadline %></td>
         <td><%= fes.adminCommunityName %></td>
         <td><%= fes.adminCommunityURL %></td>
+        <td><%= fes.adminUserID %></td>
         <td><%= link_to 'Show', fes %></td>
+        <% unless fes.participations.find_by(UserID: current_user.uid) %>
+        <td><%= link_to 'Participate', new_fes_participation_path(fes) %> 
+        <% end%>
+        <% if fes.adminUserID == current_user.uid %>
         <td><%= link_to 'Edit', edit_fes_path(fes) %></td>
         <td><%= link_to 'Destroy', fes, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

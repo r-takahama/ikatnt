@@ -69,6 +69,6 @@ class FesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fes_params
-      params.require(:fes).permit(:fesName, :adminName, :adminTwitterID, :description, :rule, :limitNumberOfTeam, :startDate, :registrationDeadline, :adminCommunityName, :adminCommunityURL)
+      params.require(:fes).permit(:fesName, :adminName, :adminTwitterID, :description, :rule, :limitNumberOfTeam, :startDate, :registrationDeadline, :adminCommunityName, :adminCommunityURL, :adminUserID)
     end
 end

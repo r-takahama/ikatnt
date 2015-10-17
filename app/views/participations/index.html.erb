@@ -21,10 +21,11 @@
         <td><%= participation.teamName %></td>
         <td><%= participation.TwitterID %></td>
         <td><%= participation.NNID %></td>
-        <td><%= participation.UserID %></td>
         <td><%= link_to 'Show', fes_participation_path(@fes, participation) %></td>
+        <% if participation.UserID == current_user.uid %>
         <td><%= link_to 'Edit', edit_fes_participation_path(@fes, participation) %></td>
         <td><%= link_to 'Destroy', fes_participation_path(@fes, participation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

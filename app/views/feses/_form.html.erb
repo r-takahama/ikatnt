@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :adminTwitterID %><br>
-    <%= f.text_field :adminTwitterID %>
+    <%= f.text_field :adminTwitterID, :value => current_user.username %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -51,6 +51,8 @@
     <%= f.label :adminCommunityURL %><br>
     <%= f.text_field :adminCommunityURL %>
   </div>
+  <div class = "field">
+    <%= f.hidden_field :adminUserID, :value => current_user.uid %>
   <div class="actions">
     <%= f.submit %>
   </div>

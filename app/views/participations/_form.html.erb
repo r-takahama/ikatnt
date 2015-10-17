@@ -21,15 +21,14 @@
   </div>
   <div class="field">
     <%= f.label :TwitterID %><br>
-    <%= f.text_field :TwitterID %>
+    <%= f.text_field :TwitterID, :value => current_user.username %>
   </div>
   <div class="field">
     <%= f.label :NNID %><br>
     <%= f.text_field :NNID %>
   </div>
   <div class="field">
-    <%= f.label :UserID %><br>
-    <%= f.text_field :UserID %>
+    <%= f.hidden_field :UserID, :value => current_user.uid %>
   </div>
   <div class="actions">
     <%= f.submit %>
